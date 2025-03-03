@@ -102,7 +102,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -141,7 +140,6 @@ web/.vscode/settings.json
 *.iml
 api/.idea
 
-api/.env
 api/storage/*
 
 docker-legacy/volumes/app/storage/*
