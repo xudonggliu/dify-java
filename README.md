@@ -1,11 +1,23 @@
 ## 开发环境
 
-**1. 启动后端接口服务**: 
+**1. 安装python 3.11或者3.12环境**:
+
+**2. 安装poetry**:  
   ```shell
-  make start-api-dev
+  pip install poetry
   ```
 
-**2. 启动前端服务**: 
+**3. 配置poetry虚拟环境**:  
+  ```shell
+  poetry env activate
+  ```
+
+**4. 启动后端接口服务**: 
+  ```shell
+  点击 vscode 的调试按钮启动即可
+  ```
+
+**5. 启动前端服务**: 
   ```shell
   make start-web-dev
   ```

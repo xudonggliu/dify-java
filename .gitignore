@@ -192,7 +192,6 @@ pyrightconfig.json
 api/.vscode
 
 .idea/
-.vscode
 
 # pnpm
 /.pnpm-store
