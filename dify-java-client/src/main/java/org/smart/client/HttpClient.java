@@ -42,6 +42,9 @@ public class HttpClient {
             URL url = new URL(urlBuilder.toString());
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
+            // 设置超时时间
+            conn.setConnectTimeout(config.getConnectionTimeout() * 1000);
+            conn.setReadTimeout(config.getReadTimeout() * 1000);
             for (Map.Entry<String, String> entry : config.buildHeaders().entrySet()) {
                 conn.setRequestProperty(entry.getKey(), entry.getValue());
             }
@@ -76,6 +79,9 @@ public class HttpClient {
             URL url = new URL(config.getApiUrl() + endpoint);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("POST");
+            // 设置超时时间
+            conn.setConnectTimeout(config.getConnectionTimeout() * 1000);
+            conn.setReadTimeout(config.getReadTimeout() * 1000);
             conn.setDoOutput(true);
             for (Map.Entry<String, String> entry : config.buildHeaders().entrySet()) {
                 conn.setRequestProperty(entry.getKey(), entry.getValue());
@@ -115,6 +121,9 @@ public class HttpClient {
             URL url = new URL(config.getApiUrl() + endpoint);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("DELETE");
+            // 设置超时时间
+            conn.setConnectTimeout(config.getConnectionTimeout() * 1000);
+            conn.setReadTimeout(config.getReadTimeout() * 1000);
             conn.setDoOutput(true);
             for (Map.Entry<String, String> entry : config.buildHeaders().entrySet()) {
                 conn.setRequestProperty(entry.getKey(), entry.getValue());
