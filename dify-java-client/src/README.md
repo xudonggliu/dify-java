@@ -9,9 +9,9 @@ For the sake of this README, let's assume the SDK is available on Maven Central:
 
 ```xml
 <dependency>
-    <groupId>smart.ai.dify</groupId>
+    <groupId>org.smart</groupId>
     <artifactId>dify-java-client</artifactId>
-    <version>1.0.0</version>
+    <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
 
@@ -128,7 +128,7 @@ public class Main {
     }
 
     /**
-     * 消息反馈
+     * 消息反馈(点赞)
      */
     private static void sendFeedback(DifyAPIClient client){
 
